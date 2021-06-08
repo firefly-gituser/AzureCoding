@@ -5,8 +5,14 @@ var port = process.env.PORT || 3000
 
 app.listen(port,()=>console.log("Running....!"));
 
+app.use(express.static(__dirname+'/resources/public/'))
+
 app.get('/',(req,res)=>{
    res.send('hello world')
+})
+
+app.get('/getIndex',(req,res)=>{
+    res.sendFile(__dirname+'/resources/views/index.html')
 })
 
 /****
