@@ -55,9 +55,13 @@
       padding: 10px 20px;
       font-size: 18px;
       border: none;
-      background: black;
+      background: #000000BD;
       color: white;
-      border-radius: 100px; }
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all linear .3s; }
+      .landing .landing__product button:hover {
+        background: black; }
 
 /******MEDIA********/
 @media screen and (max-width: 1000px) {

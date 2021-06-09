@@ -66,9 +66,14 @@
             padding: 10px 20px;
             font-size: 18px;
             border: none;
-            background: black;
+            background: #000000BD;
             color: white;
             border-radius: 100px;
+            cursor: pointer;
+            transition: all linear .3s;
+            &:hover{
+                background: black;
+            }
         }
     }
 }
