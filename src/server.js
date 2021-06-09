@@ -1,16 +1,31 @@
+/** LIBBRARY*/
 const express = require('express');
-const app =  express();
 const hbs = require('express-handlebars');
+const sass = require('node-sass-middleware')
+/**INJECTION */
+const route = require('./route')
+
+const app =  express();
+
 var port = process.env.PORT || 3000
 var url = `http://localhost:${port}`
-app.listen(port,()=>console.log(`Running in ${url}!`));
+app.listen(port,()=>console.log(`Running in ${url} !`));
 
-app.use(express.static(__dirname+'/resources/public/'));
+
 
 app.set('views',__dirname+'/resources/views')
 app.set('view engine','html')
 app.engine('html',hbs({extname:'html',defaultLayout:'main'}))
 
-app.get('/',(req,res)=>{
-   res.render('index')
-})
+
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
+app.use(sass({
+    src:__dirname+'/resources/',
+    dest: __dirname+'/public/',
+}))
+
+app.use(express.static(__dirname+'/public/'));
+
+route(app);

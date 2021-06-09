@@ -1,0 +1,36 @@
+.footer{
+    padding: 10px 5%;
+    background: black;
+    .footer_wrapper{
+        display: flex;
+        padding:10px;   
+        .footer__wrapper_caterogy{
+            flex-grow: 1;
+            li{
+                list-style: none;
+                margin-left: 10vw;
+                a{
+                    color: #ffffffBD;
+                    text-decoration: none;
+                    transition: all linear .3s;
+                    &:hover{
+                        color: white;
+                    }
+                }
+                p{
+                    color:white;
+                    cursor: pointer;
+                }
+            }
+
+            li + li{
+                margin-top: 10px;
+            }
+        }
+    }
+    .copyright{
+        color: white;
+        padding: 5px;
+        text-align: center;
+    }
+}

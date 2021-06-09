@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  width: 100vw;
+  overflow-x: hidden; }
+
+/******SCROLL BAR*************/
+/* width */
+::-webkit-scrollbar {
+  width: 5px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 100px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
+/***********KEYFRAME************/
+@keyframes font_bubble {
+  45% {
+    font-size: 20px; }
+  90% {
+    font-size: 16px; } }
+
+@keyframes font_bubble--label {
+  45% {
+    font-size: 32px; }
+  90% {
+    font-size: 45px; } }

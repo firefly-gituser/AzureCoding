@@ -1,0 +1,65 @@
+.landing {
+  background: black; }
+  .landing .landing__welcom {
+    position: relative;
+    height: calc(100vh - 60px);
+    color: white; }
+    .landing .landing__welcom .landing__welcom_header {
+      position: absolute;
+      font-size: 30px;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%); }
+    .landing .landing__welcom .landing__welcom_name {
+      font-size: 7em;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      font-weight: bold;
+      background: -webkit-linear-gradient(#ec5eff, #5c9aff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+  .landing .landing__product {
+    border-radius: 40px 40px 0 0;
+    background: white; }
+    .landing .landing__product .landing__product_show {
+      height: 100vh;
+      position: relative; }
+      .landing .landing__product .landing__product_show .landing__product_wrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        padding-top: 2vh;
+        text-align: center;
+        display: inline-block;
+        margin: auto; }
+        .landing .landing__product .landing__product_show .landing__product_wrapper p {
+          font-size: 52px;
+          font-weight: bold;
+          margin-bottom: 1vh; }
+        .landing .landing__product .landing__product_show .landing__product_wrapper div a {
+          text-decoration: none;
+          color: #5c9aff; }
+        .landing .landing__product .landing__product_show .landing__product_wrapper .landing__product_slideshow img {
+          width: 80vw;
+          max-width: 700px; }
+    .landing .landing__product button {
+      display: inline-block;
+      margin: 0 auto;
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 100px; }
+
+/******MEDIA********/
+@media screen and (max-width: 1000px) {
+  .landing .landing__welcom .landing__welcom_header {
+    top: 20%; } }
