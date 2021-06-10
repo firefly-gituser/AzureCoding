@@ -143,12 +143,23 @@
             li+li{
                 margin-left: 0;
             }
-            .header__menu_info{
+            .header__menu_info,.header_menu_loginbtn{
                 position: absolute;
                 top:0;
                 left: 50%;
                 transform: translateX(-50%);
+                button{
+                    color: #ffffffbd;
+                    background: transparent;
+                    width: 30%;
+                    transition: all linear 0.3s;
+                    &:hover{
+                        
+                        color:white;
+                    }
+                }
             }
+
            
         }
         .header__bar {

@@ -27,5 +27,12 @@ app.use(sass({
 }))
 
 app.use(express.static(__dirname+'/public/'));
+//-------------------
+var fs = require('fs');
+var dir = __dirname+'/tmp';
 
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
+//-------------------
 route(app);

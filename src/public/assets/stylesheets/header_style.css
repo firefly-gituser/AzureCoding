@@ -113,10 +113,17 @@
         margin-top: 50px; }
     .header .header__menu li + li {
       margin-left: 0; }
-    .header .header__menu .header__menu_info {
+    .header .header__menu .header__menu_info, .header .header__menu .header_menu_loginbtn {
       position: absolute;
       top: 0;
       left: 50%;
       transform: translateX(-50%); }
+      .header .header__menu .header__menu_info button, .header .header__menu .header_menu_loginbtn button {
+        color: #ffffffbd;
+        background: transparent;
+        width: 30%;
+        transition: all linear 0.3s; }
+        .header .header__menu .header__menu_info button:hover, .header .header__menu .header_menu_loginbtn button:hover {
+          color: white; }
   .header .header__bar {
     display: block; } }
