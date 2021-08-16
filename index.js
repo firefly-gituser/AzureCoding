@@ -58,7 +58,7 @@ app.listen(port,()=>console.log(`Running on ${port}`))
 
 app.get('/getlink', async (req, res) => {
 
-    let link = await getzallopaylink({})
+    let link = await getzallopaylink({_username:'tamflyfly', _description:'Mua hàng Online cho con',_amount:99000,_embed_data:{},_items:[{}]})
 
     res.status(200).json({ link })
 })
