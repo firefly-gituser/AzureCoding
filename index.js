@@ -54,11 +54,11 @@ const getzallopaylink = async({_username='',_items=[{}],_amount='0',_embed_data=
     return respone.order_url
 }
 
-app.listen(port,()=>console.log('running'))
+app.listen(port,()=>console.log(`Running on ${port}`))
 
 app.get('/getlink', async (req, res) => {
 
-    let link = await getzallopaylink()
+    let link = await getzallopaylink({})
 
     res.status(200).json({ link })
 })
