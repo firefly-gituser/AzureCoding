@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/25a5b32c-7699-43a6-a766-62928f47a20a/resourceGroups/fireflyapp/providers/Microsoft.Web/sites/fireflyapp",
-    "appService.deploySubpath": "."
-}

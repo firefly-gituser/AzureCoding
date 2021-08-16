@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test payment</title>
+</head>
+
+<body>
+    <button>Click to test</button>
+</body>
+<script type="text/javascript">
+    const $ = document.querySelector.bind(document)
+
+    const button = $('button')
+
+    const body = $('body')
+
+    const getLink = async () => {
+        let fetchAPI = await fetch('/getlink')
+
+        let JSONData = await fetchAPI.json()
+
+        let { link } = JSONData
+
+        return link
+    }
+
+    const injectLink = (link = '') => {
+        body.innerHTML = `<a href="${link}">Linkk here </a>`
+    }
+
+    const renderer = async () => {
+        let link = await getLink()
+        injectLink(link)
+    }
+
+    button.onclick = renderer
+</script>
+
+</html>
