@@ -90,9 +90,8 @@ app.post('/callback', (req, res) => {
     res.json(result);
 });
 
-app.post('/complete',(req,res)=>{
-    console.log('this is params')
-    console.log(req.body)
+app.get('/complete',(req,res)=>{
+    console.log(req)
     res.send('<h1>Transaction complete</h1>')
 })
 
